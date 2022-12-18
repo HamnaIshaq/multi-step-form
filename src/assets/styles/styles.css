@@ -1,3 +1,21 @@
+.btn {
+  background: transparent;
+  border: none;
+  color: var(--neutralWhite);
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-vertical {
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start;
+}
 
 /* sidebar */
 .sidebar-container {
@@ -10,13 +28,6 @@
 .sidebar-list {
   text-align: center;
   padding-top: 2em;
-}
-
-.btn {
-  background: transparent;
-  border: none;
-  color: var(--neutralWhite);
-  cursor: pointer;
 }
 
 .step {
@@ -43,16 +54,4 @@
   font-size: 0.75rem;
   margin-bottom: .25em;
   letter-spacing: 0;
-}
-
-.flex { 
-  display: flex;
-} 
-
-.flex-vertical {
-  flex-direction: column;
-}
-
-.align-start {
-  align-items: flex-start;
 }
