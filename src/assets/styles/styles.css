@@ -72,3 +72,26 @@
   margin-bottom: .25em;
   letter-spacing: 0;
 }
+
+/* Card */
+.card-container {
+  background: var(--neutralWhite);
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 1.875em 1.5em;
+  position: relative;
+  top: -72px;
+}
+
+.card-h2 {
+  font-size: 1.45rem;
+  color: var(--primaryMarineBlue);
+  font-family: "Ubuntu-Bold";  
+}
+
+.card-description {
+  color: var(--neutralCoolGray);
+  margin: 1em 0 1.25em 0;
+  line-height: 1.5;
+}
