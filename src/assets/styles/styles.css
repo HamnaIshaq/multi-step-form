@@ -17,6 +17,18 @@
   align-items: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /* sidebar */
 .sidebar-container {
   background-image: url('../images/bg-sidebar-mobile.svg');
