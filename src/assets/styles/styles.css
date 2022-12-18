@@ -1,0 +1,58 @@
+
+/* sidebar */
+.sidebar-container {
+  background-image: url('../images/bg-sidebar-mobile.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 170px;
+}
+
+.sidebar-list {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  color: var(--neutralWhite);
+  cursor: pointer;
+}
+
+.step {
+  display: inline-block;
+  font-family: "Ubuntu-Bold";
+  border: 2px solid var(--neutralWhite);
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  padding: 6px;
+  text-align: center;
+  margin-right: 1em;
+}
+
+.sidebar-item-name {
+  text-transform: uppercase;
+  font-family: "Ubuntu-Medium";
+  letter-spacing: 1px;
+}
+
+.step-num {
+  font-family: "Ubuntu-Regular";
+  color: var(--neutralLightGray);
+  font-size: 0.75rem;
+  margin-bottom: .25em;
+  letter-spacing: 0;
+}
+
+.flex { 
+  display: flex;
+} 
+
+.flex-vertical {
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start;
+}
