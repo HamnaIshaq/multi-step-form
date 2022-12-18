@@ -53,6 +53,12 @@
   text-align: center;
 }
 
+.active {
+  color: var(--primaryMarineBlue);
+  background-color: var(--primaryLightBlue);
+  border-color: var(--primaryLightBlue);
+}
+
 .sidebar-item-name {
   text-transform: uppercase;
   font-family: "Ubuntu-Medium";
