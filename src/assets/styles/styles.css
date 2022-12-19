@@ -95,3 +95,31 @@
   margin: 1em 0 1.25em 0;
   line-height: 1.5;
 }
+
+/* Input */
+.input-label {
+  display: block;
+  color: var(--primaryMarineBlue);
+  letter-spacing: -1px;
+  font-size: .9rem;
+  margin-bottom: .5em;
+}
+
+.input-field {
+  font-family: "Ubuntu-Medium";
+  color: var(--primaryMarineBlue);
+  border: 1px solid var(--neutralLightGray);
+  width: 100%;
+  border-radius: 5px;
+  padding: 1em .5em;
+  margin-bottom: 1em;
+}
+
+.input-field:last-child {
+  margin-bottom: 0;
+}
+
+.input-field:focus,
+.input-field:hover {
+  border: 1px solid var(--neutralCoolGray);
+}
