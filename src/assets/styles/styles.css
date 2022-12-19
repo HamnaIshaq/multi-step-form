@@ -33,6 +33,10 @@
   display: block;
 }
 
+main {
+  height: inherit;
+}
+
 input {
   outline-color: var(--primaryMarineBlue); 
 }
