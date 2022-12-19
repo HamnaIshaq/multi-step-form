@@ -135,3 +135,22 @@ input {
 .input-field:hover {
   border: 1px solid var(--neutralCoolGray);
 }
+
+
+/* Form Footer */
+.form-footer-container {
+  background-color: var(--neutralWhite);
+  padding: 1em;
+}
+
+.next-btn {
+  background-color: var(--primaryMarineBlue);
+  padding: .8em 1em;
+  border-radius: 3px;
+  font-family: "Ubuntu-Medium";
+}
+
+.next-btn:focus,
+.next-btn:hover {
+  opacity: .8;
+}
