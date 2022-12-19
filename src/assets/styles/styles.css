@@ -33,6 +33,10 @@
   display: block;
 }
 
+input {
+  outline-color: var(--primaryMarineBlue); 
+}
+
 /* sidebar */
 .sidebar-container {
   background-image: url('../images/bg-sidebar-mobile.svg');
