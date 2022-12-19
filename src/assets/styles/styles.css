@@ -21,6 +21,10 @@
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .hide {
   display: none;
 }
