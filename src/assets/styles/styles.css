@@ -17,6 +17,10 @@
   align-items: flex-start;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -25,12 +29,44 @@
   justify-content: flex-end;
 }
 
-.hide {
-  display: none;
+.justify-space-between {
+  justify-content: space-between;
 }
 
-.show {
-  display: block;
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.padding-one-and-a-half-em { 
+  padding: 1.5em;
+}
+
+.font-size-14px {
+  font-size: 0.93rem;
+}
+
+.font-family-ubuntu-regular {
+  font-family: "Ubuntu-Regular", sans-serif;
+}
+
+.font-family-ubuntu-medium {
+  font-family: "Ubuntu-Medium", sans-serif;
+}
+
+.font-family-ubuntu-bold {
+  font-family: "Ubuntu-Bold", sans-serif;
+}
+
+.marine-blue-color {
+  color: var(--primaryMarineBlue);
+}
+
+.cool-gray-color {
+  color: var(--neutralCoolGray);
+}
+
+.purplish-blue-color {
+  color: var(--primaryPurplishBlue);
 }
 
 main {
@@ -54,15 +90,21 @@ input {
   padding-top: 2em;
 }
 
+.sidebar-list-item + .sidebar-list-item{
+  margin-left: .5em;
+}
+
 .step {
   display: inline-block;
   font-family: "Ubuntu-Bold";
+  color: var(--neutralWhite);
   border: 2px solid var(--neutralWhite);
   border-radius: 50%;
   width: 33px;
   height: 33px;
   padding: 6px;
   text-align: center;
+  text-decoration: none;
 }
 
 .active {
@@ -89,7 +131,7 @@ input {
 .card-container {
   background: var(--neutralWhite);
   border-radius: 10px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   padding: 1.875em 1.5em;
   position: relative;
@@ -109,11 +151,15 @@ input {
 }
 
 /* Input */
-.input-label {
-  display: block;
+
+.input-label-container {
   color: var(--primaryMarineBlue);
   letter-spacing: -1px;
   font-size: .9rem;
+}
+
+.input-label {
+  display: inline-block;
   margin-bottom: .5em;
 }
 
@@ -127,15 +173,20 @@ input {
   margin-bottom: 1em;
 }
 
-.input-field:last-child {
-  margin-bottom: 0;
-}
-
 .input-field:focus,
 .input-field:hover {
   border: 1px solid var(--neutralCoolGray);
 }
 
+.error-msg {
+  font-family: "Ubuntu-Medium";
+  letter-spacing: .01em;
+  color: var(--primaryStrawberryRed);
+}
+
+.error-input-field {
+  border-color: var(--primaryStrawberryRed);
+}
 
 /* Form Footer */
 .form-footer-container {
@@ -145,12 +196,176 @@ input {
 
 .next-btn {
   background-color: var(--primaryMarineBlue);
-  padding: .8em 1em;
-  border-radius: 3px;
+  padding: 1em 1.75em;
+  border-radius: 8px;
   font-family: "Ubuntu-Medium";
 }
 
 .next-btn:focus,
 .next-btn:hover {
   opacity: .8;
+}
+
+.back-btn {
+  color: var(--neutralCoolGray);
+  background: transparent;
+}
+
+.back-btn:focus,
+.back-btn:hover {
+  opacity: 1;
+  color: var(--primaryMarineBlue);
+}
+
+.confirm-btn {
+  background-color: var(--primaryPurplishBlue);
+}
+
+.confirm-btn:focus,
+.confirm-btn:hover {
+  opacity: .7;
+}
+
+/* Select plan */
+
+.selection-input-card {
+  display: flex;
+  padding: 1em;
+}
+
+.radio-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.plan-img {
+  display: block;
+  align-self: flex-start;
+}
+
+.plan-details {
+  margin-left: 1em;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-details > * {
+  margin-top: .25em;
+}
+
+.plan-cost,
+.plan-free-duration {
+  margin-top: .5em;
+}
+
+.plan-cost {
+  color: var(--neutralCoolGray);
+}
+
+.plan-duration {
+  text-decoration: none;
+}
+
+.selected-choice,
+.radio-input:checked ~ .selection-input-card,
+.checkbox-input:checked ~ .checkbox-field-label {
+  background-color: var(--neutralAlabaster);
+  border-color: var(--primaryPurplishBlue);
+}
+
+.radio-input:focus ~ .selection-input-card,
+.checkbox-input:focus ~ .checkbox-field-label::before,
+.checkbox-input:checked:focus ~ .checkbox-field-label {
+  outline: 2px solid var(--primaryPurplishBlue);
+}
+
+/*Add-ons*/
+
+.add-ons-service-details {
+  font-size: 15px;
+}
+
+/*custom checkbox styling styrts*/
+
+.checkbox-input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+
+.checkbox-field-label {
+  position: relative;
+}
+
+.checkbox-field-label::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--neutralWhite);
+  border: 1px solid var(--neutralLightGray);
+  border-radius: 4px;
+  align-self: center;
+}
+
+.checkbox-input:checked ~ .checkbox-field-label::before {
+  background-image: url('../images/icon-checkmark.svg');
+  background-color: var(--primaryPurplishBlue);
+  background-repeat: no-repeat;
+  background-position: 3px center;
+}
+
+/*custom checkbox styling ends*/
+
+.addons-service-description > * {
+  display: block;
+}
+
+.addons-service-perk {
+  font-size: inherit;
+  margin: .25em 0 0 0;
+}
+
+.addons-service-cost {
+  font-size: 15px;
+  font-family: "Ubuntu-Medium";
+}
+
+/* Summary */
+.summary-info {
+  background-color: var(--neutralMagnolia);
+  border: none;
+  border-radius: 8px;
+}
+
+.summary-info:focus,
+.summary-info:hover {
+  border: none;
+}
+
+.change-plan-btn {
+  padding: 0;
+  text-decoration: underline;
+}
+
+.summary-plan-cost {
+  font-size: .93rem;
+}
+
+/*Thank you*/
+.thank-you-img {
+  width: 56px;
+  height: 56px;
+  margin: 2em 0 1.25em 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
