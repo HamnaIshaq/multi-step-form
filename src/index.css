@@ -37,5 +37,11 @@ body {
   font-weight: normal;
   font-style: normal;
   background-color: var(--neutralMagnolia);
+  min-height: 100vh;
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
 }
 
