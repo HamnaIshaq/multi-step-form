@@ -1,31 +1,35 @@
+import React from 'react';
 import '../assets/styles/styles.css';
 import SidebarItem from './SidebarItem'; 
 
 const sideBarItems = [
   {
-    number: "1",
+    number: 1,
     stepNumber: "step 1",
-    heading: "your info"
+    heading: "your info",
+    path: "/"
   },
   {
-    number: "2",
+    number: 2,
     stepNumber: "step 2",
-    heading: "select plan"
+    heading: "select plan",
+    path:"selectplan"
   },
   {
-    number: "3",
+    number: 3,
     stepNumber: "step 3",
-    heading: "add-ons"
+    heading: "add-ons",
+    path:"addons"
   },
   {
-    number: "4",
+    number: 4,
     stepNumber: "step 4",
-    heading: "summary"
+    heading: "summary",
+    path:"summary"
   }
 ]
 
 const Sidebar = () => {
-
   return (
     <div className="sidebar-container">
       <ul className="sidebar-list flex justify-center">
@@ -36,6 +40,7 @@ const Sidebar = () => {
               number={item.number} 
               stepNumber={item.stepNumber} 
               heading={item.heading}
+              path={item.path}
             />
           )
         })}
