@@ -1,8 +1,18 @@
-const RadioCard = () => {
+const RadioCard = ({ userAddOns, setUserAddOns }) => {
+
+  const onAddOnSelection = (e) => {
+    if(e.target.checked === true) {
+      setUserAddOns(addOns => [...addOns, {addon: e.target.value, cost: parseInt(e.target.getAttribute('data-addon-cost'))}]);
+      return;
+    }
+    const filteredAddOns = userAddOns.filter(item => item.addon !== e.target.value);
+    setUserAddOns(filteredAddOns);
+  }
+
   return (
     <fieldset className="radio-input-container">
       <div>
-        <input type="checkbox" name="addon" id="online-service" className="checkbox-input"/>
+        <input type="checkbox" name="addon" id="online-service" className="checkbox-input" value="online service" data-addon-cost="1" onClick={onAddOnSelection}/>
         <label htmlFor="online-service" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
@@ -15,7 +25,7 @@ const RadioCard = () => {
       </div>
 
       <div>
-        <input type="checkbox" name="addon" id="larger-storage" className="checkbox-input"/>
+        <input type="checkbox" name="addon" id="larger-storage" className="checkbox-input" value="larger storage" data-addon-cost="2" onClick={onAddOnSelection}/>
         <label htmlFor="larger-storage" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
@@ -28,7 +38,7 @@ const RadioCard = () => {
       </div>
 
       <div>
-        <input type="checkbox" name="addon" id="custom-profile" className="checkbox-input"/>
+        <input type="checkbox" name="addon" id="custom-profile" className="checkbox-input" value="custom profile" data-addon-cost="2" onClick={onAddOnSelection}/>
         <label htmlFor="custom-profile" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
