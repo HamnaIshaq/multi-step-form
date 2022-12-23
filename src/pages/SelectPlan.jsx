@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import RadioCard from '../components/RadioCard';
 
-const SelectPlan = () => {
+const SelectPlan = ({ userPlan, setUserPlan }) => {
   return (
     <div>
       <Card heading="Select your plan" description="You have the option of monthly or yearly billing.">
-        <RadioCard/>
+        <RadioCard userPlan={userPlan} setUserPlan={setUserPlan}/>
       </Card>
 
       <div className="form-footer-container flex justify-space-between">
