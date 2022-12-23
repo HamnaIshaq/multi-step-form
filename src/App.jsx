@@ -13,14 +13,17 @@ import FormFooter from './components/FormFooter';
 
 const App = () => {
 
+  const [userPlan, setUserPlan] = useState({ plan: '', planCost: null });
+  const [userAddOns, setUserAddOns] = useState([]);
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SharedLayout/>}>
           <Route index element={<PersonalInfo/>}/>
-          <Route path="/selectplan" element={<SelectPlan/>}/>
-          <Route path="/addons" element={<AddOns/>}/>
-          <Route path="/summary" element={<Summary/>}/>
+          <Route path="/selectplan" element={<SelectPlan userPlan={userPlan} setUserPlan={setUserPlan}/>}/>
+          <Route path="/addons" element={<AddOns userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>}/>
+          <Route path="/summary" element={<Summary userPlan={userPlan} setUserPlan={setUserPlan} userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>}/>
           <Route path="/thankyou" element={<ThankYou/>}/>
         </Route>
         <Route path="*" element={<Error/>} />
