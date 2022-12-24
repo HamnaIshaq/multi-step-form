@@ -11,7 +11,16 @@ const RadioCard = ({ userPlan, setUserPlan }) => {
   return (
     <>
       <div>
-        <input type="radio" id="plan-arcade" name="plan" className="radio-input" value="arcade" data-plan-cost="9" onClick={onPlanSelection}/>
+        <input 
+          type="radio" 
+          id="plan-arcade" 
+          name="plan" 
+          className="radio-input" 
+          value="arcade" 
+          data-plan-cost="9" 
+          checked={userPlan.plan === 'arcade'}
+          onChange={onPlanSelection}
+        />
         <label htmlFor="plan-arcade" className="input-field selection-input-card">
           <img className="plan-img" src={ArcadeIcon} alt="game" />
           <div className="plan-details">
@@ -23,7 +32,16 @@ const RadioCard = ({ userPlan, setUserPlan }) => {
       </div>
 
       <div>
-        <input type="radio" id="plan-advanced" name="plan" className="radio-input" value="advanced" data-plan-cost="12" onClick={onPlanSelection}/>
+        <input 
+          type="radio" 
+          id="plan-advanced" 
+          name="plan" 
+          className="radio-input" 
+          value="advanced" 
+          data-plan-cost="12" 
+          checked={userPlan.plan === 'advanced'}
+          onChange={onPlanSelection}
+        />
         <label htmlFor="plan-advanced" className="input-field selection-input-card">
         <img className="plan-img" src={AdvancedIcon} alt="game" />
         <div className="plan-details">
@@ -35,7 +53,15 @@ const RadioCard = ({ userPlan, setUserPlan }) => {
       </div>
 
       <div>
-        <input type="radio" id="plan-pro" name="plan" className="radio-input" value="pro" data-plan-cost="15" onClick={onPlanSelection}/>
+        <input 
+          type="radio" 
+          id="plan-pro" 
+          name="plan" 
+          className="radio-input" 
+          value="pro" 
+          data-plan-cost="15"
+          checked={userPlan.plan === 'pro'}
+          onChange={onPlanSelection}/>
           <label htmlFor="plan-pro" className="input-field selection-input-card">
           <img className="plan-img" src={ProIcon} alt="game" />
           <div className="plan-details">
