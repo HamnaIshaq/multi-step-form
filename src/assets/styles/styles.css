@@ -379,11 +379,6 @@ input {
 }
 
 /* Summary */
-.summary-plan-container {
-  border-bottom: 2px solid var(--neutralLightGray);
-  padding-bottom: .75em;
-}
-
 .summary-info {
   background-color: var(--neutralMagnolia);
   border: none;
@@ -406,6 +401,8 @@ input {
 
 .summary-addons-container {
   margin-top: 1em;
+  border-top: 2px solid var(--neutralLightGray);
+  padding-top: 1em;
 }
 
 .summary-total-cost-container {
