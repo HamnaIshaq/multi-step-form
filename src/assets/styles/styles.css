@@ -49,6 +49,10 @@
   font-size: 0.93rem;
 }
 
+.text-capitalize-first {
+  text-transform: capitalize;
+}
+
 .font-family-ubuntu-regular {
   font-family: "Ubuntu-Regular", sans-serif;
 }
