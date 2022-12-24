@@ -19,7 +19,7 @@ const SummaryInfo = ({ userPlan, setUserPlan, userAddOns, setUserAddOns }) => {
     <div>
       <div className="summary-info">
         <div className="padding-one-and-a-half-em">
-          <div className="flex justify-space-between summary-plan-container">
+          <div className="flex justify-space-between">
             <div className="summary-info-container flex flex-vertical">
               <strong className="marine-blue-color font-family-ubuntu-medium text-capitalize-first">{userPlan.plan}(Monthly)</strong>
               <Link to="/selectplan">
