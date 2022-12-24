@@ -1,4 +1,11 @@
 const RadioCard = ({ userAddOns, setUserAddOns }) => {
+  
+  const checkSelected = (value) => {
+    const val = userAddOns.find(item => item.addon === value);
+    
+    const selectedCheckbox = val ? val.addon : null;
+    return selectedCheckbox !== null ? true : false;
+  }
 
   const onAddOnSelection = (e) => {
     if(e.target.checked === true) {
@@ -12,7 +19,15 @@ const RadioCard = ({ userAddOns, setUserAddOns }) => {
   return (
     <fieldset className="radio-input-container">
       <div>
-        <input type="checkbox" name="addon" id="online-service" className="checkbox-input" value="online service" data-addon-cost="1" onClick={onAddOnSelection}/>
+        <input 
+          type="checkbox" 
+          name="addon" 
+          id="online-service" 
+          className="checkbox-input" 
+          value="online service" 
+          data-addon-cost="1" 
+          checked={checkSelected("online service")}
+          onChange={onAddOnSelection}/>
         <label htmlFor="online-service" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
@@ -25,7 +40,15 @@ const RadioCard = ({ userAddOns, setUserAddOns }) => {
       </div>
 
       <div>
-        <input type="checkbox" name="addon" id="larger-storage" className="checkbox-input" value="larger storage" data-addon-cost="2" onClick={onAddOnSelection}/>
+        <input 
+        type="checkbox" 
+        name="addon" 
+        id="larger-storage" 
+        className="checkbox-input" 
+        value="larger storage" 
+        data-addon-cost="2" 
+        checked={checkSelected("larger storage")}
+        onChange={onAddOnSelection}/>
         <label htmlFor="larger-storage" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
@@ -38,7 +61,15 @@ const RadioCard = ({ userAddOns, setUserAddOns }) => {
       </div>
 
       <div>
-        <input type="checkbox" name="addon" id="custom-profile" className="checkbox-input" value="custom profile" data-addon-cost="2" onClick={onAddOnSelection}/>
+        <input 
+        type="checkbox" 
+        name="addon" 
+        id="custom-profile" 
+        className="checkbox-input" 
+        value="customizable profile" 
+        data-addon-cost="2" 
+        checked={checkSelected("customizable profile")}
+        onChange={onAddOnSelection}/>
         <label htmlFor="custom-profile" className="input-field selection-input-card checkbox-field-label">        
           <div className="plan-details add-ons-service-details">
             <div className="addons-service-description">
