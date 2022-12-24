@@ -200,6 +200,9 @@ input {
 .form-footer-container {
   background-color: var(--neutralWhite);
   padding: 1em;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .next-btn {
