@@ -13,8 +13,8 @@ import FormFooter from './components/FormFooter';
 
 const App = () => {
 
-  const [userPlan, setUserPlan] = useState({ plan: '', planCost: null });
-  const [userAddOns, setUserAddOns] = useState([]);
+  const [userPlan, setUserPlan] = useState({ plan: 'arcade', planCost: 9 });
+  const [userAddOns, setUserAddOns] = useState([ {addon: 'online service', cost: 1}, {addon: 'larger storage', cost: 2} ]);
 
   return (
     <BrowserRouter>
