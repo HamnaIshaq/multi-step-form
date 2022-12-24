@@ -233,9 +233,12 @@ input {
   padding: 1em;
 }
 
-.radio-input {
+.radio-input,
+.switch-checkbox {
   opacity: 0;
   position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .plan-img {
@@ -277,6 +280,36 @@ input {
 .radio-input:focus ~ .selection-input-card,
 .checkbox-input:focus ~ .checkbox-field-label::before,
 .checkbox-input:checked:focus ~ .checkbox-field-label {
+  outline: 2px solid var(--primaryPurplishBlue);
+}
+
+.switch-slider {
+  width: 50px;
+  height: 25px;
+  background: var(--primaryMarineBlue);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 1.25em;
+}
+
+.switch-slider:before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: var(--neutralWhite);
+  border-radius: 50%;
+  transition: transform .4s ease-in-out;
+}
+
+.switch-checkbox:checked ~ .switch-label .switch-slider:before {
+  transform: translate3d(25px, 0, 0);
+}
+
+.switch-checkbox:focus ~ .switch-label .switch-slider {
   outline: 2px solid var(--primaryPurplishBlue);
 }
 
