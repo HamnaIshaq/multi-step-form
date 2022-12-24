@@ -9,7 +9,7 @@ const RadioCard = ({ userPlan, setUserPlan }) => {
   }
 
   return (
-    <fieldset className="radio-input-container">
+    <>
       <div>
         <input type="radio" id="plan-arcade" name="plan" className="radio-input" value="arcade" data-plan-cost="9" onClick={onPlanSelection}/>
         <label htmlFor="plan-arcade" className="input-field selection-input-card">
@@ -46,7 +46,7 @@ const RadioCard = ({ userPlan, setUserPlan }) => {
         </label>
       </div>
       
-    </fieldset>
+    </>
   );
 }
 
