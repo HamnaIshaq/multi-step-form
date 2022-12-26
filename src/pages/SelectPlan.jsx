@@ -1,16 +1,34 @@
-
 import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import RadioCard from '../components/RadioCard';
 import PlanType from '../components/PlanType';
 
-const SelectPlan = ({ userPlan, setUserPlan }) => {
+const SelectPlan = ({ userPlan, setUserPlan, planTypeYearly, setPlanTypeYearly, userAddOns, setUserAddOns }) => {
+  
+  const planCostMonthly = { arcade: 9, advanced: 12, pro: 15 };
+  const planCostYearly = { arcade: 90, advanced: 120, pro: 150 };
+
   return (
     <div>
       <Card heading="Select your plan" description="You have the option of monthly or yearly billing.">
         <fieldset className="radio-input-container">
-          <RadioCard userPlan={userPlan} setUserPlan={setUserPlan}/>
-          <PlanType />
+          <RadioCard 
+            userPlan={userPlan} 
+            setUserPlan={setUserPlan} 
+            planTypeYearly={planTypeYearly} 
+            planCostMonthly={planCostMonthly} 
+            planCostYearly={planCostYearly}
+          />
+          <PlanType 
+            planTypeYearly={planTypeYearly} 
+            setPlanTypeYearly={setPlanTypeYearly} 
+            userPlan={userPlan} 
+            setUserPlan={setUserPlan} 
+            planCostMonthly={planCostMonthly} 
+            planCostYearly={planCostYearly} 
+            userAddOns={userAddOns} 
+            setUserAddOns={setUserAddOns}
+          />
         </fieldset>
       </Card>
 
