@@ -14,21 +14,47 @@ import FormFooter from './components/FormFooter';
 const App = () => {
 
   const [userPlan, setUserPlan] = useState({ plan: 'arcade', planCost: 9 });
-  const [userAddOns, setUserAddOns] = useState([ {addon: 'online service', cost: 1}, {addon: 'larger storage', cost: 2} ]);
+  const [userAddOns, setUserAddOns] = useState([ {addon: 'Online service', cost: 1}, {addon: 'Larger storage', cost: 2} ]);
+  const [planTypeYearly, setPlanTypeYearly] = useState(false);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout/>}>
-          <Route index element={<PersonalInfo/>}/>
-          <Route path="/selectplan" element={<SelectPlan userPlan={userPlan} setUserPlan={setUserPlan}/>}/>
-          <Route path="/addons" element={<AddOns userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>}/>
-          <Route path="/summary" element={<Summary userPlan={userPlan} setUserPlan={setUserPlan} userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>}/>
-          <Route path="/thankyou" element={<ThankYou/>}/>
-        </Route>
-        <Route path="*" element={<Error/>} />
-      </Routes>
-    </BrowserRouter>
+    <main className="main-container">
+      <div className="desktop-layout-container">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<SharedLayout/>}>
+              <Route index element={<PersonalInfo/>}/>
+              <Route path="/selectplan" element={
+                <SelectPlan 
+                  userPlan={userPlan} 
+                  setUserPlan={setUserPlan} 
+                  planTypeYearly={planTypeYearly} 
+                  setPlanTypeYearly={setPlanTypeYearly}
+                  userAddOns={userAddOns} 
+                  setUserAddOns={setUserAddOns}/>}
+                />
+              <Route path="/addons" element={
+                <AddOns 
+                  userAddOns={userAddOns} 
+                  setUserAddOns={setUserAddOns} 
+                  planTypeYearly={planTypeYearly}/>}
+                />
+              <Route path="/summary" element={
+                <Summary 
+                  userPlan={userPlan} 
+                  setUserPlan={setUserPlan} 
+                  userAddOns={userAddOns} 
+                  setUserAddOns={setUserAddOns}
+                  planTypeYearly={planTypeYearly}/>}
+                />
+              <Route path="/thankyou" element={<ThankYou/>}/>
+            </Route>
+            <Route path="*" element={<Error/>} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </main>
+    
   )
 }
 export default App
