@@ -273,6 +273,10 @@ input {
   margin-top: .5em;
 }
 
+.plan-free-duration {
+  font-size: .9rem;
+}
+
 .plan-cost {
   color: var(--neutralCoolGray);
 }
@@ -400,9 +404,12 @@ input {
 }
 
 .summary-addons-container {
-  margin-top: 1em;
-  border-top: 2px solid var(--neutralLightGray);
   padding-top: 1em;
+}
+
+.summary-addons-wrapper {
+  border-top: 2px solid var(--neutralLightGray);
+  margin-top: 1em;
 }
 
 .summary-total-cost-container {
