@@ -9,7 +9,7 @@ const SelectPlan = ({ userPlan, setUserPlan, planTypeYearly, setPlanTypeYearly, 
   const planCostYearly = { arcade: 90, advanced: 120, pro: 150 };
 
   return (
-    <div>
+    <div className="form-container">
       <Card heading="Select your plan" description="You have the option of monthly or yearly billing.">
         <fieldset className="radio-input-container">
           <RadioCard 

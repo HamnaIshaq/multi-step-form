@@ -4,7 +4,7 @@ import SummaryInfo from '../components/SummaryInfo';
 
 const Summary = ({ userPlan, setUserPlan, userAddOns, setUserAddOns }) => {
   return (
-    <div>
+    <div className="form-container">
       <Card heading="Finishing up" description="Double-check everything looks OK before confirming.">
         <SummaryInfo userPlan={userPlan} setUserPlan={setUserPlan} userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>
       </Card>

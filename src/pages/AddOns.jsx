@@ -8,7 +8,7 @@ const AddOns = ({ userAddOns, setUserAddOns, planTypeYearly }) => {
   const addOnsYearly = { "Online service": 10, "Larger storage": 20, "Customizable profile": 20 };
 
   return (
-    <div>
+    <div className="form-container">
       <Card heading="Pick add-ons" description="Add-ons help enhance your gaming experience.">
         <CheckboxCard 
           userAddOns={userAddOns} 

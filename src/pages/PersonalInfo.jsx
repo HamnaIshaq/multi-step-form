@@ -41,7 +41,7 @@ const PersonalInfo = () => {
   }
   
   return (
-    <>
+    <div className="form-container">
       <Card heading="Personal info" description="Please provide your name, email address, and phone number.">
         <form id="personal-info">
           <InputField 
@@ -85,7 +85,7 @@ const PersonalInfo = () => {
         </Link>
       </div>
       
-    </>
+    </div>
   );
 }
 

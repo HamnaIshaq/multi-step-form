@@ -3,7 +3,7 @@ import ThankYouIcon from '../assets/images/icon-thank-you.svg';
 
 const ThankYou = () => {
   return (
-    <div>
+    <div className="form-container desktop-center">
       <div style={{textAlign: 'center'}}>
         <Card 
           heading="Thank you!"
