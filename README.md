@@ -12,7 +12,7 @@
 
 - <a href="https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s03.html" title="Validate international phone number">Validate international phone number</a>
 
-- <a href=" https://javascript.plainenglish.io/how-to-add-to-an-array-in-react-state-3d08ddb2e1dc" title="How to add to an array in react state">How to add to an array in react state</a>
+- <a href="https://javascript.plainenglish.io/how-to-add-to-an-array-in-react-state-3d08ddb2e1dc" title="How to add to an array in react state">How to add to an array in react state</a>
 
 - <a href="https://www.w3schools.com/howto/howto_css_switch.asp" title="Custom toggle switch with CSS">Custom toggle switch with CSS</a>
 
