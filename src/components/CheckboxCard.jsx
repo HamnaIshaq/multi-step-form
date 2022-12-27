@@ -30,8 +30,8 @@ const CheckboxCard = ({ userAddOns, setUserAddOns, addOnsMonthly, addOnsYearly, 
           data-addon-cost={planTypeYearly ? addOnsYearly["Online service"] : addOnsMonthly["Online service"] }
           checked={checkSelected("Online service")}
           onChange={onAddOnSelection}/>
-        <label htmlFor="online-service" className="input-field selection-input-card checkbox-field-label">        
-          <div className="plan-details add-ons-service-details">
+        <label htmlFor="online-service" className="input-field details-container-card checkbox-field-label">        
+          <div className="details-container add-ons-service-details">
             <div className="addons-service-description">
               <span className="plan-name">Online service</span>
               <span className="card-description addons-service-perk">Access to multiplayer games</span>
@@ -51,8 +51,8 @@ const CheckboxCard = ({ userAddOns, setUserAddOns, addOnsMonthly, addOnsYearly, 
         data-addon-cost={planTypeYearly ? addOnsYearly["Larger storage"] : addOnsMonthly["Larger storage"]} 
         checked={checkSelected("Larger storage")}
         onChange={onAddOnSelection}/>
-        <label htmlFor="larger-storage" className="input-field selection-input-card checkbox-field-label">        
-          <div className="plan-details add-ons-service-details">
+        <label htmlFor="larger-storage" className="input-field details-container-card checkbox-field-label">        
+          <div className="details-container add-ons-service-details">
             <div className="addons-service-description">
               <span className="plan-name">Larger storage</span>
               <span className="card-description addons-service-perk">Extra 1TB of cloud save</span>
@@ -72,8 +72,8 @@ const CheckboxCard = ({ userAddOns, setUserAddOns, addOnsMonthly, addOnsYearly, 
         data-addon-cost={planTypeYearly ? addOnsYearly["Customizable profile"] : addOnsMonthly["Customizable profile"]}
         checked={checkSelected("Customizable profile")}
         onChange={onAddOnSelection}/>
-        <label htmlFor="custom-profile" className="input-field selection-input-card checkbox-field-label">        
-          <div className="plan-details add-ons-service-details">
+        <label htmlFor="custom-profile" className="input-field details-container-card checkbox-field-label">        
+          <div className="details-container add-ons-service-details">
             <div className="addons-service-description">
               <span className="plan-name">Customizable profile</span>
               <span className="card-description addons-service-perk">Custom theme on your profile</span>
