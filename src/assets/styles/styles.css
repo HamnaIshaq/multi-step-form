@@ -125,6 +125,7 @@ input {
   text-transform: uppercase;
   font-family: "Ubuntu-Medium";
   letter-spacing: 1px;
+  display: none;
 }
 
 .step-num {
@@ -239,7 +240,8 @@ input {
 
 /* Select plan */
 
-.selection-input-card {
+.selection-input-card,
+.details-container-card {
   display: flex;
   padding: 1em;
 }
@@ -257,14 +259,16 @@ input {
   align-self: flex-start;
 }
 
-.plan-details {
+.plan-details,
+.details-container {
   margin-left: 1em;
   align-self: center;
   display: flex;
   flex-direction: column;
 }
 
-.plan-details > * {
+.plan-details > *,
+.details-container > * {
   margin-top: .25em;
 }
 
@@ -430,4 +434,126 @@ input {
 
 .show {
   display: block;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .desktop-layout-container {
+    max-width: 940px;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--neutralWhite);
+    border-radius: 8px;
+    padding: 1.25em;
+  }
+
+  .sidebar-container {
+    background-image: url('../images/bg-sidebar-desktop.svg');
+    height: 100%;
+    border-radius: 8px;
+    width: 30%;
+    padding: 1.5em;
+    position: relative;
+  }
+
+  .sidebar-item-name {
+    display: flex;
+    margin-left: 1em;
+  }
+
+  .sidebar-list {
+    flex-direction: column;
+  }
+
+  .sidebar-list-item + .sidebar-list-item {
+    margin-left: 0;
+    margin-top: 2em;
+  }
+
+  .step {
+    align-self: center;
+  } 
+
+  .step-num {
+    margin-bottom: .5em;
+    font-size: .8rem;
+    letter-spacing: 1px;
+  }
+
+  .card-container {
+    position: static;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 3em 0;
+  }
+
+  .form-container {
+    background-color: var(--neutralWhite);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 2em;
+    margin: 0 auto;
+  }
+
+  .personal-info {
+    margin-top: 2.5em;
+  }
+
+  .input-container {
+    margin-bottom: 1em;
+  }
+
+  .card-h2 {
+    font-size: 2rem;
+  }
+
+  .form-footer-container {
+    position: static;
+    padding: 0 0 1em 0;
+  }
+
+  .plan-container {
+    display: flex;
+  }
+
+  .selection-input-card {
+    flex-direction: column;
+  }
+
+  .plan-details {
+    margin: 0;
+    align-self: flex-start;
+    margin-top: 3em;
+  }
+
+  .plan-option-container {
+    width: 100%;
+    border-radius: 9px;
+  }
+
+  .plan-option-container + .plan-option-container {
+    margin-left: 1em;
+  }
+
+  .desktop-center {
+    justify-content: center;
+  }
+
+  .thank-you-img {
+    width: 80px;
+    height: 80px;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
 }
