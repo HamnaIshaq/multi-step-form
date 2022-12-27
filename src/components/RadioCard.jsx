@@ -9,8 +9,8 @@ const RadioCard = ({ userPlan, setUserPlan, planTypeYearly, planCostMonthly, pla
   }
   
   return (
-    <>
-      <div>
+    <div className="plan-container">
+      <div className="plan-option-container">
         <input 
           type="radio" 
           id="plan-arcade" 
@@ -34,7 +34,7 @@ const RadioCard = ({ userPlan, setUserPlan, planTypeYearly, planCostMonthly, pla
         </label>
       </div>
 
-      <div>
+      <div className="plan-option-container">
         <input 
           type="radio" 
           id="plan-advanced" 
@@ -55,7 +55,7 @@ const RadioCard = ({ userPlan, setUserPlan, planTypeYearly, planCostMonthly, pla
       </label>
       </div>
 
-      <div>
+      <div className="plan-option-container">
         <input 
           type="radio" 
           id="plan-pro" 
@@ -75,7 +75,7 @@ const RadioCard = ({ userPlan, setUserPlan, planTypeYearly, planCostMonthly, pla
         </label>
       </div>
       
-    </>
+    </div>
   );
 }
 
