@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import SummaryInfo from '../components/SummaryInfo';
 
-const Summary = ({ userPlan, setUserPlan, userAddOns, setUserAddOns }) => {
+const Summary = ({ userPlan, userAddOns }) => {
   return (
     <div className="form-container">
       <Card heading="Finishing up" description="Double-check everything looks OK before confirming.">
-        <SummaryInfo userPlan={userPlan} setUserPlan={setUserPlan} userAddOns={userAddOns} setUserAddOns={setUserAddOns}/>
+        <SummaryInfo userPlan={userPlan} userAddOns={userAddOns}/>
       </Card>
       <div className="form-footer-container flex justify-space-between">
         <Link to="/addons">
