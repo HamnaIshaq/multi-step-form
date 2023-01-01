@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const SummaryInfo = ({ userPlan, setUserPlan, userAddOns, setUserAddOns, planTypeYearly }) => {
+const SummaryInfo = ({ userPlan, userAddOns, planTypeYearly }) => {
   let totalCost = userPlan.planCost;
 
   const planAndAddOns = userAddOns.map((addon, index) => {
@@ -10,11 +10,6 @@ const SummaryInfo = ({ userPlan, setUserPlan, userAddOns, setUserAddOns, planTyp
       <span className="marine-blue-color summary-plan-cost">+${addon.cost}/<abbr className="plan-duration" title="month">mo</abbr></span>
     </div>});
 
-  const changeUserService = () => {
-    setUserPlan({ plan: '', planCost: null });
-    setUserAddOns([]);
-  }
-
   return (
     <div>
       <div className="summary-info">
@@ -23,7 +18,7 @@ const SummaryInfo = ({ userPlan, setUserPlan, userAddOns, setUserAddOns, planTyp
             <div className="summary-info-container flex flex-vertical">
               <strong className="marine-blue-color font-family-ubuntu-medium text-capitalize-first">{userPlan.plan}({planTypeYearly ? "Yearly" : "Monthly"})</strong>
               <Link to="/selectplan">
-                <button type="button" className="btn next-btn back-btn cool-gray-color change-plan-btn font-family-ubuntu-regular" onClick={changeUserService}>Change</button>
+                <button type="button" className="btn next-btn back-btn cool-gray-color change-plan-btn font-family-ubuntu-regular">Change</button>
               </Link>
             </div>
             <span className="plan-cost marine-blue-color summary-plan-cost">${userPlan.planCost}/<abbr className="plan-duration" title={planTypeYearly ? "year" : "month"}>{planTypeYearly ? "yr" : "mo"}</abbr></span> 
