@@ -23,9 +23,9 @@ const SummaryInfo = ({ userPlan, userAddOns, planTypeYearly }) => {
             </div>
             <span className="plan-cost marine-blue-color summary-plan-cost">${userPlan.planCost}/<abbr className="plan-duration" title={planTypeYearly ? "year" : "month"}>{planTypeYearly ? "yr" : "mo"}</abbr></span> 
           </div>
-          <div className="summary-addons-wrapper">
+          {planAndAddOns.length !== 0 ? <div className="summary-addons-wrapper">
             {planAndAddOns}
-          </div>
+          </div> : ''}
         </div>
       </div>
       <div className="flex justify-space-between align-center padding-one-and-a-half-em summary-total-cost-container">
